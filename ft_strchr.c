@@ -6,11 +6,11 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 20:19:11 by bshoda            #+#    #+#             */
-/*   Updated: 2026/04/28 20:53:01 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/04/28 21:21:31 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stdio.h>
 
 char	*ft_strchr(char *str, int c);
 
