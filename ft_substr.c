@@ -6,7 +6,7 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 20:10:26 by bshoda            #+#    #+#             */
-/*   Updated: 2026/05/01 21:52:03 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/05/01 21:57:55 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include <stdlib.h>
 
 // char	*ft_substr(char const *s, unsigned int start, size_t len);
-size_t	ft_strlen(char *s);
-char	*empty_str(void);
+size_t		ft_strlen(const char *s);
+static char	*empty_str(void);
 
 // int	main(void)
 // {
@@ -55,7 +55,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub);
 }
 
-size_t	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
