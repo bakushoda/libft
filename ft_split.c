@@ -11,29 +11,29 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
+// #include <stdio.h>
 
-char		**ft_split(char const *s, char c);
+// char		**ft_split(char const *s, char c);
 int			count_words(char const *s, char c);
 int			count_character(char const *s, char c);
 char const	*char_insert(char const *s, char c, char *array);
 
-int	main(void)
-{
-	char const	s[] = "hello world brazil";
-	char		c = ' ';
-	char		**array;
-	int			i;
+// int	main(void)
+// {
+// 	char const	s[] = "hello world brazil";
+// 	char		c = ' ';
+// 	char		**array;
+// 	int			i;
 
-	array = ft_split(s, c);
-	i = 0;
-	while (*array)
-	{
-		printf("%s\n", array[i]);
-		i++;
-	}
-	return (0);
-}
+// 	array = ft_split(s, c);
+// 	i = 0;
+// 	while (array[i])
+// 	{
+// 		printf("%s\n", array[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }
 
 char	**ft_split(char const *s, char c)
 {
