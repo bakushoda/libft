@@ -23,12 +23,14 @@ int	main(void)
 	char const	s[] = "hello world brazil";
 	char		c = ' ';
 	char		**array;
+	int			i;
 
 	array = ft_split(s, c);
+	i = 0;
 	while (*array)
 	{
-		printf("%s\n", *array);
-		array++;
+		printf("%s\n", array[i]);
+		i++;
 	}
 	return (0);
 }
@@ -41,7 +43,6 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	count = count_words(s, c);
-	printf("%d", count);
 	array = malloc(sizeof(char *) * (count + 1));
 	if (!array)
 		return (NULL);
@@ -50,7 +51,6 @@ char	**ft_split(char const *s, char c)
 	while (i < count)
 	{
 		char_count = count_character(s, c);
-		printf("%d", char_count);
 		array[i] = malloc(sizeof(char) * (char_count + 1));
 		if (!array[i])
 			return (NULL);
@@ -91,10 +91,8 @@ int	count_character(char const *s, char c)
 	i = 0;
 	count = 0;
 	while (s[i] == c)
-	{
 		i++;
-	}
-	while (s[i] != c)
+	while (s[i] && s[i] != c)
 	{
 		i++;
 		count++;
@@ -106,7 +104,7 @@ char const	*char_insert(char const *s, char c, char *array)
 {
 	while (*s == c)
 		s++;
-	while (*s != c)
+	while (*s && *s != c)
 	{
 		*array = *s;
 		array++;
