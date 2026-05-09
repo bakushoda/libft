@@ -6,7 +6,7 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/02 13:24:37 by bshoda            #+#    #+#             */
-/*   Updated: 2026/05/09 12:35:56 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/05/09 12:37:31 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 // #include <stdio.h>
 
 // char		**ft_split(char const *s, char c);
-int			count_words(char const *s, char c);
-int			count_character(char const *s, char c);
-char const	*char_insert(char const *s, char c, char *array);
+static int			count_words(char const *s, char c);
+static int			count_character(char const *s, char c);
+char const			*char_insert(char const *s, char c, char *array);
 
 // int	main(void)
 // {
