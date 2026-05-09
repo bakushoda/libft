@@ -6,7 +6,7 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/02 13:24:37 by bshoda            #+#    #+#             */
-/*   Updated: 2026/05/02 16:45:33 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/05/09 12:35:56 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ char	**ft_split(char const *s, char c)
 	int		char_count;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	count = count_words(s, c);
 	array = malloc(sizeof(char *) * (count + 1));
 	if (!array)
@@ -60,7 +62,7 @@ char	**ft_split(char const *s, char c)
 	return (array);
 }
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -83,7 +85,7 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-int	count_character(char const *s, char c)
+static int	count_character(char const *s, char c)
 {
 	int	i;
 	int	count;
