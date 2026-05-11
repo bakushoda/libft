@@ -6,11 +6,12 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 21:53:43 by bshoda            #+#    #+#             */
-/*   Updated: 2026/05/01 22:46:29 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/05/11 21:01:34 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <stdlib.h>
 
 // char		*ft_strjoin(char const *s1, char const *s2);
 static char	*putstr(char *total, const char *s1, const char *s2);

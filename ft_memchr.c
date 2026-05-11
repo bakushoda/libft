@@ -6,7 +6,7 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 22:22:41 by bshoda            #+#    #+#             */
-/*   Updated: 2026/04/28 22:58:33 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/05/11 20:59:16 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	{
 		if (s[i] == (unsigned char)c)
 		{
-			return (&s[i]);
+			return ((void *)&s[i]);
 		}
 		i++;
 	}

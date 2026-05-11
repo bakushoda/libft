@@ -6,7 +6,7 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 21:23:38 by bshoda            #+#    #+#             */
-/*   Updated: 2026/04/28 21:46:33 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/05/11 20:58:01 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ char	*ft_strrchr(const char *str, int c)
 	{
 		if (str[i] == c)
 		{
-			last = &str[i];
+			last = (char *)&str[i];
 		}
 		i++;
 	}
 	if (str[i] == c)
 	{
-		return (&str[i]);
+		return ((char *)&str[i]);
 	}
 	return (last);
 }
