@@ -6,11 +6,12 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 20:13:59 by bshoda            #+#    #+#             */
-/*   Updated: 2026/05/10 20:23:32 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/05/11 21:24:07 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
