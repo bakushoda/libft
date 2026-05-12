@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
 // char		*ft_strjoin(char const *s1, char const *s2);
 static char	*putstr(char *total, const char *s1, const char *s2);

@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strchr(char *str, int c);
+#include "libft.h"
 
 // int	main(void)
 // {
@@ -25,7 +23,7 @@ char	*ft_strchr(char *str, int c);
 // 	return (0);
 // }
 
-char	*ft_strchr(char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
 	int	i;
 
@@ -34,11 +32,11 @@ char	*ft_strchr(char *str, int c)
 	{
 		if (str[i] == c)
 		{
-			return (&str[i]);
+			return ((char *)&str[i]);
 		}
 		i++;
 	}
 	if (str[i] == c)
-		return (&str[i]);
+		return ((char *)&str[i]);
 	return (NULL);
 }

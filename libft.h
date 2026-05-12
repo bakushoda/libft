@@ -6,7 +6,7 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 21:00:00 by bshoda            #+#    #+#             */
-/*   Updated: 2026/05/12 19:39:57 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/05/12 20:17:36 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stddef.h>
+# include <stdint.h>
 
 typedef struct s_list
 {

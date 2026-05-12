@@ -10,13 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-// #include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 // char			*ft_strtrim(char const *s1, char const *set);
 static int		in_set(char c, const char *set);
-static size_t	ft_strlen(const char *s1);
 
 // int	main(void)
 // {
@@ -70,14 +67,4 @@ static int	in_set(char c, const char *set)
 		i++;
 	}
 	return (0);
-}
-
-static size_t	ft_strlen(const char *s1)
-{
-	int	i;
-
-	i = 0;
-	while (s1[i])
-		i++;
-	return (i);
 }

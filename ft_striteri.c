@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 // char	to_upper(unsigned int n, char *c);
 // void	ft_striteri(char *s, void (*f)(unsigned int, char *));

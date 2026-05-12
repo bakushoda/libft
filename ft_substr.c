@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
 // char	*ft_substr(char const *s, unsigned int start, size_t len);
-static size_t		ft_strlen(const char *s);
 static char			*empty_str(void);
 
 // int	main(void)
@@ -53,18 +51,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	sub[i] = '\0';
 	return (sub);
-}
-
-static size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
 }
 
 static char	*empty_str(void)

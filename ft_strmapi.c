@@ -10,11 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 // char		add_index(unsigned int i, char c);
 // char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-static int	ft_strlen(const char *s);
 
 // int	main(void)
 // {
@@ -47,14 +46,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	res[i] = '\0';
 	return (res);
-}
-
-static int	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
 }
