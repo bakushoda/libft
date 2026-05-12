@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_strlecpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
@@ -22,6 +22,8 @@ size_t	ft_strlecpy(char *dst, const char *src, size_t size)
 	{
 		i++;
 	}
+	if (size == 0)
+		return (i);
 	j = 0;
 	while (j < size - 1 && src[j])
 	{
