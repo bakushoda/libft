@@ -6,7 +6,7 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 21:00:00 by bshoda            #+#    #+#             */
-/*   Updated: 2026/05/11 21:35:03 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/05/12 19:39:57 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,6 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 
 void	ft_putnbr_fd(int n, int fd);
-
-/* bonus */
 
 t_list	*ft_lstnew(void *content);
 
