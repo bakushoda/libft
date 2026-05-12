@@ -27,20 +27,22 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int		i;
-	char	*last;
+	int				i;
+	char			*last;
+	unsigned char	uc;
 
 	i = 0;
 	last = NULL;
+	uc = (unsigned char)c;
 	while (str[i])
 	{
-		if (str[i] == c)
+		if ((unsigned char)str[i] == uc)
 		{
 			last = (char *)&str[i];
 		}
 		i++;
 	}
-	if (str[i] == c)
+	if ((unsigned char)str[i] == uc)
 	{
 		return ((char *)&str[i]);
 	}

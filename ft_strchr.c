@@ -25,18 +25,20 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	int	i;
+	int				i;
+	unsigned char	uc;
 
 	i = 0;
+	uc = (unsigned char)c;
 	while (str[i])
 	{
-		if (str[i] == c)
+		if ((unsigned char)str[i] == uc)
 		{
 			return ((char *)&str[i]);
 		}
 		i++;
 	}
-	if (str[i] == c)
+	if ((unsigned char)str[i] == uc)
 		return ((char *)&str[i]);
 	return (NULL);
 }
