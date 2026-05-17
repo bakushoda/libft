@@ -6,7 +6,7 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/02 13:24:37 by bshoda            #+#    #+#             */
-/*   Updated: 2026/05/17 20:32:28 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/05/17 20:40:30 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 static int					count_words(char const *s, char c);
 static int					count_character(char const *s, char c);
 static char const			*char_insert(char const *s, char c, char *array);
+static void					free_array(char **array, int i);
 
 // int	main(void)
 // {
@@ -54,7 +55,10 @@ char	**ft_split(char const *s, char c)
 		char_count = count_character(s, c);
 		array[i] = malloc(sizeof(char) * (char_count + 1));
 		if (!array[i])
+		{
+			free_array(array, i);
 			return (NULL);
+		}
 		s = char_insert(s, c, array[i]);
 		i++;
 	}
@@ -113,4 +117,14 @@ static char const	*char_insert(char const *s, char c, char *array)
 	}
 	*array = '\0';
 	return (s);
+}
+
+static void	free_array(char **array, int i)
+{
+	while (i > 0)
+	{
+		i--;
+		free(array[i]);
+	}
+	free(array);
 }
