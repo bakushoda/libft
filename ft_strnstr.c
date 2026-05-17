@@ -6,40 +6,40 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 10:43:50 by bshoda            #+#    #+#             */
-/*   Updated: 2026/04/29 11:29:37 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/05/17 20:26:05 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+// char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 // int	main(void)
 // {
-// 	char	haystack[] = "hello world";
-// 	char	needle[] = "hello";
+// 	char	big[] = "hello world";
+// 	char	little[] = "hello";
 // 	size_t	len;
 
 // 	len = 5;
-// 	ft_strnstr(haystack, needle, len);
+// 	ft_strnstr(big, little, len);
 // 	return (0);
 // }
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
-	if (!needle[0])
-		return ((char *)haystack);
+	if (!little[0])
+		return ((char *)big);
 	i = 0;
-	while (haystack[i] && i < len)
+	while (big[i] && i < len)
 	{
 		j = 0;
-		while (needle[j] && haystack[i + j] == needle[j] && (i + j) < len)
+		while (little[j] && big[i + j] == little[j] && (i + j) < len)
 			j++;
-		if (!needle[j])
-			return ((char *)&haystack[i]);
+		if (!little[j])
+			return ((char *)&big[i]);
 		i++;
 	}
 	return (NULL);
