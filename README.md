@@ -1,4 +1,4 @@
-*このプロジェクトは bshoda によって、42 カリキュラムの一環として作成されました。*
+*This project has been created as part of the 42 curriculum by bshoda*
 
 # Libft
 
