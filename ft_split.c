@@ -12,26 +12,27 @@
 
 #include "libft.h"
 
-// char						**ft_split(char const *s, char c);
-static int					count_words(char const *s, char c);
-static int					count_character(char const *s, char c);
-static char const			*char_insert(char const *s, char c, char *array);
-static void					free_array(char **array, int i);
+static int			count_words(char const *s, char c);
+static int			count_character(char const *s, char c);
+static char const	*char_insert(char const *s, char c, char *array);
+static char			**free_array(char **array, int i);
 
 // int	main(void)
 // {
-// 	char const	s[] = "hello world brazil";
-// 	char		c = ' ';
-// 	char		**array;
-// 	int			i;
+// 	char	**array;
+// 	int		i;
 
-// 	array = ft_split(s, c);
+// 	array = ft_split("hello world brazil", ' ');
+// 	if (!array)
+// 		return (1);
 // 	i = 0;
 // 	while (array[i])
 // 	{
 // 		printf("%s\n", array[i]);
+// 		free(array[i]);
 // 		i++;
 // 	}
+// 	free(array);
 // 	return (0);
 // }
 
@@ -39,7 +40,6 @@ char	**ft_split(char const *s, char c)
 {
 	int		count;
 	char	**array;
-	int		char_count;
 	int		i;
 
 	if (!s)
@@ -52,13 +52,9 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (i < count)
 	{
-		char_count = count_character(s, c);
-		array[i] = malloc(sizeof(char) * (char_count + 1));
+		array[i] = malloc(sizeof(char) * (count_character(s, c) + 1));
 		if (!array[i])
-		{
-			free_array(array, i);
-			return (NULL);
-		}
+			return (free_array(array, i));
 		s = char_insert(s, c, array[i]);
 		i++;
 	}
@@ -119,7 +115,7 @@ static char const	*char_insert(char const *s, char c, char *array)
 	return (s);
 }
 
-static void	free_array(char **array, int i)
+static char	**free_array(char **array, int i)
 {
 	while (i > 0)
 	{
@@ -127,4 +123,5 @@ static void	free_array(char **array, int i)
 		free(array[i]);
 	}
 	free(array);
+	return (NULL);
 }
