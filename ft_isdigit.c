@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-// int	ft_isdigit(int a);
+// int	ft_isdigit(int c);
 
 // int	main(void)
 // {
@@ -25,9 +25,9 @@
 // 	return (0);
 // }
 
-int	ft_isdigit(int a)
+int	ft_isdigit(int c)
 {
-	if (a >= '0' && a <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

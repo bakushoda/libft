@@ -23,22 +23,22 @@
 // 	return (0);
 // }
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int				i;
 	unsigned char	uc;
 
 	i = 0;
 	uc = (unsigned char)c;
-	while (str[i])
+	while (s[i])
 	{
-		if ((unsigned char)str[i] == uc)
+		if ((unsigned char)s[i] == uc)
 		{
-			return ((char *)&str[i]);
+			return ((char *)&s[i]);
 		}
 		i++;
 	}
-	if ((unsigned char)str[i] == uc)
-		return ((char *)&str[i]);
+	if ((unsigned char)s[i] == uc)
+		return ((char *)&s[i]);
 	return (NULL);
 }

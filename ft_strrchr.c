@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-// char	*ft_strrchr(const char *str, int c);
+// char	*ft_strrchr(const char *s, int c);
 
 // int	main(void)
 // {
@@ -25,7 +25,7 @@
 // 	return (0);
 // }
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int				i;
 	char			*last;
@@ -34,17 +34,17 @@ char	*ft_strrchr(const char *str, int c)
 	i = 0;
 	last = NULL;
 	uc = (unsigned char)c;
-	while (str[i])
+	while (s[i])
 	{
-		if ((unsigned char)str[i] == uc)
+		if ((unsigned char)s[i] == uc)
 		{
-			last = (char *)&str[i];
+			last = (char *)&s[i];
 		}
 		i++;
 	}
-	if ((unsigned char)str[i] == uc)
+	if ((unsigned char)s[i] == uc)
 	{
-		return ((char *)&str[i]);
+		return ((char *)&s[i]);
 	}
 	return (last);
 }
