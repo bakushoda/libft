@@ -6,16 +6,16 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/02 13:24:37 by bshoda            #+#    #+#             */
-/*   Updated: 2026/05/09 12:37:31 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/05/17 20:32:28 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// char		**ft_split(char const *s, char c);
-static int			count_words(char const *s, char c);
-static int			count_character(char const *s, char c);
-char const			*char_insert(char const *s, char c, char *array);
+// char						**ft_split(char const *s, char c);
+static int					count_words(char const *s, char c);
+static int					count_character(char const *s, char c);
+static char const			*char_insert(char const *s, char c, char *array);
 
 // int	main(void)
 // {
@@ -101,7 +101,7 @@ static int	count_character(char const *s, char c)
 	return (count);
 }
 
-char const	*char_insert(char const *s, char c, char *array)
+static char const	*char_insert(char const *s, char c, char *array)
 {
 	while (*s == c)
 		s++;
