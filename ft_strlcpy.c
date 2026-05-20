@@ -6,13 +6,13 @@
 /*   By: bshoda <bshoda@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 20:24:42 by bshoda            #+#    #+#             */
-/*   Updated: 2026/04/25 20:28:30 by bshoda           ###   ########.fr       */
+/*   Updated: 2026/05/20 19:36:58 by bshoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
@@ -22,10 +22,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	{
 		i++;
 	}
-	if (dstsize == 0)
+	if (size == 0)
 		return (i);
 	j = 0;
-	while (j < dstsize - 1 && src[j])
+	while (j < size - 1 && src[j])
 	{
 		dst[j] = src[j];
 		j++;
